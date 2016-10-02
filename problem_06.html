@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<script>
+
+/*		6. Write a function which takes in two arrays and determines if they contain the same number of the   
+		same values.
+		[], [] -> true
+		[2, 3, 4], [1, 2, 3] -> false
+		["a", "c", "b"], ["a", "b", "c"] -> true
+		[1, 1, 1], [1, 1, 1, 1] -> false  */
+
+		arrOne = [1, 2, 3];
+		arrTwo = [1, 2, 3, 4];
+		arrThree = [1, 3, 2];
+		arrFour = [1, 2, 3, 10];
+		arrFive = ["a", "b", "c"];
+		arrSix = ["a", "c", "b"];
+
+
+
+		function sameNumberValue(arr, arrCom) {
+			var isThere = true;
+			if (arr.length !== arrCom.length) {
+				isThere = false;
+				return "false";
+			}
+			for (var i = 0; i < arr.length; i ++) {
+				if (arrCom.indexOf(arr[i]) === -1) {
+					isThere = false;
+				}
+			}
+			if (!isThere) return "false";
+			if (isThere) return "true";
+		}
+
+		console.log(sameNumberValue(arrOne, arrThree));
+		console.log(sameNumberValue(arrOne, arrTwo));
+		console.log(sameNumberValue(arrTwo, arrFour));
+		console.log(sameNumberValue(arrFive, arrSix));
+
+	</script>
+	
+</body>
+</html>

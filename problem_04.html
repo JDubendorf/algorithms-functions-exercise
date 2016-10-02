@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Problem 04</title>
+</head>
+<body>
+		
+	<script>
+
+		/* 4. Write a function which takes an array of integers and returns an array with any duplicate integers removed.
+		[1,1,2,3,1,2,3] -> [1,2,3]
+		[1,4,4,4,2,2,4,4,4] -> [1,4,2]	*/
+
+		// thanks to Charlotte for her assistance
+
+		var arrRun = [2, 2, 3, 4, 5, 4, 6, 7, 9, 9, 9, 10, 11];
+		
+		function noDups(arr) {
+			var newArr = [];
+			for (var i = 0; i < arr.length; i ++ ) {
+				var a = arr[i];
+				if (newArr.indexOf(a) === -1) {
+					newArr.push(a);
+				}
+			} return newArr;
+		}
+
+		console.log(noDups(arrRun));
+
+	</script>
+
+
+</body>
+</html>
